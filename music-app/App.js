@@ -208,9 +208,7 @@ const App = () => {
         />
         <Tab.Screen
           name="Settings"
-          component={SettingsScreen}
-          
-          initialParams={{ serverUrl: configurations.serverUrl, updateServerUrl: SetServerUrl }}
+          children={() => <SettingsScreen serverUrl={configurations.serverUrl} updateServerUrl={SetServerUrl} />}
           options={{
             tabBarIcon: ({ color }) => <Ionicons name="settings" size={25} color={color} />,
           }}

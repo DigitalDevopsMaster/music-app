@@ -95,7 +95,7 @@ const PlayerScreen = (props) => {
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity onPress={onPreviousSong} style={styles.button}>
-            <Ionicons name="caret-back" size={40} color="white" />   
+            <Ionicons name="play-skip-back" size={40} color="white" />   
         </TouchableOpacity>
         <TouchableOpacity onPress={togglePlayPause} style={styles.button}>
             {
@@ -108,7 +108,7 @@ const PlayerScreen = (props) => {
             <Ionicons name="stop" size={40} color="white" />   
         </TouchableOpacity>
         <TouchableOpacity onPress={onNextSong} style={styles.button}>
-            <Ionicons name="caret-forward" size={40} color="white" />   
+            <Ionicons name="play-skip-forward" size={40} color="white" />   
         </TouchableOpacity>
       </View>
     </View>

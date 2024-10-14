@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text, TextInput } from 'react-native';
 
 const SettingsScreen = (props) => {
-  const { navigation, route: { params: { serverUrl, updateServerUrl }}} = props;
+  const { serverUrl, updateServerUrl } = props;
   const [inputValue, setInputValue] = useState(serverUrl);
 
   const onSave = () => {
@@ -12,12 +12,11 @@ const SettingsScreen = (props) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Configuración del Servidor</Text>
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>URL del Servidor</Text>
+        <Text style={styles.label}>Server URL</Text>
         <TextInput
           style={styles.input}
-          placeholder="Ingresa la URL del servidor"
+          placeholder="Server URL"
           value={inputValue}
           onChangeText={setInputValue}
           autoCapitalize="none"
@@ -25,7 +24,7 @@ const SettingsScreen = (props) => {
         />
       </View>
       <TouchableOpacity onPress={onSave} style={styles.saveButton}>
-        <Text style={styles.saveButtonText}>Guardar</Text>
+        <Text style={styles.saveButtonText}>Save</Text>
       </TouchableOpacity>
     </View>
   );
